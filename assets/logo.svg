@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7cf5c8" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#2f6bff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0b0f1a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="discGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8ecf4"/>
+      <stop offset="55%" stop-color="#2f6bff"/>
+      <stop offset="100%" stop-color="#0b0f1a"/>
+    </linearGradient>
+    <linearGradient id="dissolveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7cf5c8" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#2f6bff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0b0f1a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="slotGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2f6bff"/>
+      <stop offset="100%" stop-color="#0b0f1a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="256" height="256" fill="#0b0f1a"/>
+
+  <!-- Soft phosphor glow behind mark -->
+  <ellipse cx="128" cy="140" rx="100" ry="70" fill="url(#glow)"/>
+
+  <!-- Console slot - open trapezoid cradle, off-center perspective -->
+  <polygon points="42,168 214,168 196,196 60,196" fill="#0b0f1a" stroke="#2f6bff" stroke-width="2.5" stroke-linejoin="miter"/>
+  <polygon points="48,172 208,172 192,192 64,192" fill="none" stroke="#7cf5c8" stroke-width="1" opacity="0.4"/>
+
+  <!-- Slot inner line detail -->
+  <line x1="58" y1="180" x2="198" y2="180" stroke="#2f6bff" stroke-width="1" opacity="0.6"/>
+  <line x1="62" y1="186" x2="194" y2="186" stroke="#7cf5c8" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Disc body - square format, tilted slightly, cradled in slot -->
+  <g transform="translate(128,128) rotate(-8) translate(-128,-128)">
+    <!-- Main disc square with clipped corner -->
+    <path d="M 66,66 L 190,66 L 190,190 L 100,190 L 66,156 Z"
+          fill="url(#discGrad)" stroke="#e8ecf4" stroke-width="1.5" stroke-linejoin="round"/>
+
+    <!-- Inner geometric rings - phosphor grid feel -->
+    <path d="M 82,82 L 174,82 L 174,174 L 108,174 L 82,148 Z"
+          fill="none" stroke="#e8ecf4" stroke-width="0.8" opacity="0.5"/>
+    <path d="M 98,98 L 158,98 L 158,158 L 116,158 L 98,140 Z"
+          fill="none" stroke="#7cf5c8" stroke-width="0.6" opacity="0.4"/>
+
+    <!-- Central hub / spindle hole - square geometry -->
+    <rect x="112" y="112" width="32" height="32" fill="#0b0f1a" stroke="#7cf5c8" stroke-width="1.2"/>
+    <rect x="120" y="120" width="16" height="16" fill="#2f6bff" opacity="0.6"/>
+
+    <!-- Data track lines radiating - technical grid -->
+    <line x1="90" y1="128" x2="112" y2="128" stroke="#e8ecf4" stroke-width="0.6" opacity="0.5"/>
+    <line x1="144" y1="128" x2="166" y2="128" stroke="#e8ecf4" stroke-width="0.6" opacity="0.5"/>
+    <line x1="128" y1="90" x2="128" y2="112" stroke="#e8ecf4" stroke-width="0.6" opacity="0.5"/>
+    <line x1="128" y1="144" x2="128" y2="166" stroke="#e8ecf4" stroke-width="0.6" opacity="0.5"/>
+
+    <!-- Edge dissolving effect - right side breaking into fragments -->
+    <g opacity="0.85">
+      <polygon points="190,66 196,72 190,80 184,74" fill="#7cf5c8" opacity="0.8"/>
+      <polygon points="190,90 198,96 192,104 186,98" fill="#7cf5c8" opacity="0.6"/>
+      <polygon points="190,114 200,120 194,128 186,122" fill="#2f6bff" opacity="0.7"/>
+      <polygon points="190,138 196,144 190,152 184,146" fill="#7cf5c8" opacity="0.5"/>
+      <polygon points="188,162 194,168 188,176 182,170" fill="#2f6bff" opacity="0.4"/>
+      <polygon points="196,80 204,86 198,94 192,88" fill="#7cf5c8" opacity="0.35"/>
+      <polygon points="198,110 208,116 202,124 194,118" fill="#2f6bff" opacity="0.3"/>
+      <polygon points="194,148 202,154 196,162 190,156" fill="#7cf5c8" opacity="0.25"/>
+    </g>
+
+    <!-- Dissolved edge particles -->
+    <rect x="202" y="70" width="3" height="3" fill="#7cf5c8" opacity="0.5"/>
+    <rect x="210" y="92" width="2" height="2" fill="#7cf5c8" opacity="0.4"/>
+    <rect x="206" y="126" width="4" height="2" fill="#2f6bff" opacity="0.35"/>
+    <rect x="214" y="108" width="2" height="2" fill="#7cf5c8" opacity="0.3"/>
+    <rect x="204" y="156" width="3" height="2" fill="#7cf5c8" opacity="0.2"/>
+    <rect x="188" y="184" width="2" height="3" fill="#2f6bff" opacity="0.3"/>
+  </g>
+
+  <!-- Slot front lip highlight -->
+  <line x1="44" y1="168" x2="60" y2="168" stroke="#7cf5c8" stroke-width="2.5" opacity="0.9"/>
+  <line x1="196" y1="168" x2="212" y2="168" stroke="#2f6bff" stroke-width="2" opacity="0.7"/>
+
+  <!-- Wordmark - small, bottom -->
+  <text x="128" y="232" font-family="'Courier New', monospace" font-size="11" fill="#e8ecf4" text-anchor="middle" letter-spacing="4" opacity="0.65">PS5-EMU</text>
+
+  <!-- Tiny status LED -->
+  <circle cx="128" cy="208" r="2.5" fill="#7cf5c8" opacity="0.8"/>
+</svg>
