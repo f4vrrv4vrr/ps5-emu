@@ -1,0 +1,1 @@
+"""Qt-based desktop shell for ps5-emu."""
