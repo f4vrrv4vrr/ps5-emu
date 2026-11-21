@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+*.spec
+.idea/
+.vscode/
+.pytest_cache/
+*.log
+
+# emulator artifacts
+*.elf
+*.pup
+serial.bin
+cache/
+screenshots/
